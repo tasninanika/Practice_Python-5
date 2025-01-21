@@ -14,15 +14,15 @@ Created on Tue Jan 21 14:24:24 2025
 #Otherwise, return False.
 
 
-a = int(input("Enter a number: "))
-b = int(input("Enter a number: "))
+a = int(input("Enter a number for a: "))
+b = int(input("Enter a number for b: "))
 
+flag = input("Enter flag (true/false): ").lower()
 
-if a > 0 and b < 0 or a < 0 and b > 0:
-    flag = "false"
+if (a >= 0 and b < 0 or a < 0 and b >= 0) and flag == "false":
     print("true")
-elif a < 0 and b < 0:
-    flag = "true"
+elif a < 0 and b < 0 and flag == "true":
     print("true")
-elif a > 0 and b > 0:
-    print("flase")
+else:
+    print("false")
+
